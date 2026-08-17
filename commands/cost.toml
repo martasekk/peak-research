@@ -1,0 +1,5 @@
+description = "Show LLM adjudication API spend and cache hits from the shared cost log."
+prompt = """
+Show peak-research API spend and cache statistics:
+python "${extensionPath}/skills/peak-research/tools/retrieval.py" cost
+"""

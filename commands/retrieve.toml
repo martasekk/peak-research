@@ -1,0 +1,12 @@
+description = "Run an ad-hoc literature retrieval query using OpenAlex, arXiv, Crossref, Jina, GitHub, or Semantic Scholar."
+prompt = """
+Run ad-hoc literature retrieval with the peak-research toolkit:
+Target query / args: {{args}}
+
+Toolkit:
+- OpenAlex search: python "${extensionPath}/skills/peak-research/tools/retrieval.py" openalex "{{args}}" 2023 5
+- arXiv fetch: python "${extensionPath}/skills/peak-research/tools/retrieval.py" arxiv <arxiv_id>
+- Crossref lookup: python "${extensionPath}/skills/peak-research/tools/retrieval.py" crossref <doi>
+- Jina page reader: python "${extensionPath}/skills/peak-research/tools/retrieval.py" jina <url>
+- GitHub code search: python "${extensionPath}/skills/peak-research/tools/retrieval.py" github_search "{{args}}" 5
+"""

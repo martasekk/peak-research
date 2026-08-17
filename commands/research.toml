@@ -1,0 +1,13 @@
+description = "Run the full gated research pipeline on a topic and publish a citable artifact. Usage: /research <topic> [--archetype ...] [--adjudicate] [--live-verify]"
+prompt = """
+Run the peak-research pipeline on: {{args}}
+
+Before running:
+1. Review the METHOD and hard rules from the peak-research context.
+2. Separate the research question from flags. If no archetype is named, default to literature_review (or architecture_decision / high_stakes_factual).
+3. Check OPENALEX_MAILTO to ensure polite pool access.
+4. Execute the pipeline:
+python "${extensionPath}/skills/peak-research/run_research.py" --topic "{{args}}"
+
+Deliverables land in ./research/<topic>.md. Report gate results (G1, G3, G5) honestly.
+"""

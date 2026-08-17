@@ -1,0 +1,14 @@
+description = "Check the peak-research install: tests, path resolution, API identity, and LLM adjudication wiring."
+prompt = """
+Run the diagnostic suite for peak-research:
+
+1. Offline test suites:
+   python "${extensionPath}/skills/peak-research/test_gate.py"
+   python "${extensionPath}/skills/peak-research/test_adjudicate.py"
+
+2. Path resolution:
+   python -c "import sys; sys.path.insert(0, r'${extensionPath}/skills/peak-research/tools'); import paths as P; print('workspace', P.workspace()); print('cache    ', P.cache_dir()); print('runs     ', P.runs_dir()); print('output   ', P.output_dir()); print('catalog  ', P.catalog_path())"
+
+3. Adjudication check (if configured):
+   python "${extensionPath}/skills/peak-research/tools/adjudicate.py"
+"""

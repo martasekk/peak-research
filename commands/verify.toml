@@ -1,0 +1,8 @@
+description = "Verify citations and artifact structure against quality gates G3 and G5."
+prompt = """
+Verify research citations and artifact structure for: {{args}}
+
+Run verification:
+- Gate 3 (citations resolve): python "${extensionPath}/skills/peak-research/tools/retrieval.py" verify "{{args}}" --live
+- Gate 5 (artifact structure): python "${extensionPath}/skills/peak-research/tools/retrieval.py" check_artifact "{{args}}"
+"""
