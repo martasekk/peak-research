@@ -1,0 +1,26 @@
+{
+  "name": "peak-research",
+  "owner": {
+    "name": "Martin Hrabal",
+    "email": "hrabal@jtjdreams.cz"
+  },
+  "metadata": {
+    "description": "Evidence-first deep-research tooling for Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "peak-research",
+      "source": "./",
+      "description": "Gated 5-phase research pipeline with a validated retrieval toolkit (OpenAlex, arXiv, Crossref, Jina, GitHub, Semantic Scholar), a typed claim ledger, a mandatory contradiction pass, and publish gates that block a malformed or unverifiable artifact.",
+      "version": "2.1.4",
+      "category": "research",
+      "keywords": [
+        "research",
+        "literature-review",
+        "citations",
+        "evidence"
+      ]
+    }
+  ]
+}

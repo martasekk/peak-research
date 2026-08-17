@@ -1,0 +1,19 @@
+{
+  "name": "peak-research",
+  "description": "Evidence-first deep research: a gated 5-phase pipeline (Plan â†’ Retrieve â†’ Extract â†’ Synthesize â†’ Audit) that produces a citable artifact and refuses to publish one that fails its own gates.",
+  "version": "2.1.4",
+  "author": {
+    "name": "Martin Hrabal",
+    "email": "hrabal@jtjdreams.cz"
+  },
+  "keywords": [
+    "research",
+    "literature-review",
+    "citations",
+    "openalex",
+    "arxiv",
+    "crossref",
+    "evidence",
+    "verification"
+  ]
+}

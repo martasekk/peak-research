@@ -1,0 +1,7 @@
+# Workspace: run state and the API/LLM response cache. Created wherever the pipeline is
+# invoked from, never inside the install — but ignore it here too, for local development.
+.peak-research/
+research/
+
+__pycache__/
+*.py[cod]
