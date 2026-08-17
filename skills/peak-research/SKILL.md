@@ -12,11 +12,11 @@ and an orchestrator that enforces the phase order, subagent dispatch, and qualit
 
 When this skill is executed by an AI Agent (Antigravity / Gemini / Claude):
 
-> **HARD REQUIREMENT**: The agent **MUST** actively use subagents (`invoke_subagent` with `peak-retriever` or `research` role, max 3 concurrent) for Phase 2 parallel retrieval passes and research tracks. Do **NOT** execute all retrieval sequentially in a single main context when subagents are available.
+> **HARD REQUIREMENT**: The agent **MUST** actively use subagents (`invoke_subagent` with `peak-retriever` or `research` role, up to 10 concurrent) for Phase 2 parallel retrieval passes and research tracks. Do **NOT** execute all retrieval sequentially in a single main context when subagents are available.
 
 ### Subagent Execution Architecture:
 1. **Phase 1 (Plan)**: Main agent derives objective, subquestions, and query stems (`PLAN.json`).
-2. **Phase 2 (Retrieve - Concurrent Leaf Subagents)**: Main agent spawns up to 3 parallel subagents using `invoke_subagent`:
+2. **Phase 2 (Retrieve - Concurrent Leaf Subagents)**: Main agent spawns up to 10 parallel subagents using `invoke_subagent`:
    - **Worker 1 (`peak-retriever`)**: Discovery pass (broad literature and core stems).
    - **Worker 2 (`peak-retriever`)**: Contradiction pass (actively seeking dissent, failure replications, critiques).
    - **Worker 3 (`peak-retriever`)**: Gap & targeted pass (answering specific subquestions and boundary conditions).

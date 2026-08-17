@@ -15,7 +15,7 @@ peak-research produces a **citable, audit-gated research artifact** using a 5-ph
 ## Subagent Roles & Contract
 
 ### `peak-retriever` (Leaf Worker)
-- **Role**: Dispatched for independent parallel literature searches (up to 3 concurrent).
+- **Role**: Dispatched for independent parallel literature searches (up to 10 concurrent).
 - **Contract**:
   - Exactly one specific retrieval goal / sub-track.
   - Never spawns child subagents.

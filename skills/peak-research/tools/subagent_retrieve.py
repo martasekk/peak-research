@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Leaf retrieval worker — runs ONE pass and prints ONE JSON blob to stdout.
 
-Spawned by run_research.py phase 2, at most 3 concurrent, per the subagent contract
+Spawned by run_research.py phase 2, up to 10 concurrent, per the subagent contract
 in CONFIG.md: explicit goal, fixed source types, primary findings only, and failures
 RECORDED rather than papered over with a substitute source.
 
