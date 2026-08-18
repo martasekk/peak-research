@@ -72,7 +72,7 @@ Crossref (DOI verify) -> arXiv API (https+UA, retry) -> r.jina.ai -> raw curl
 If ALL fail: flag honestly, drop the source, do NOT fabricate. Firecrawl is usually 402 —
 treat as unavailable.
 
-## Subagent contract (up to 10 concurrent; leaf only)
+## Subagent contract (max 3 concurrent; leaf only)
 
 Applies both to the scripted workers `run_research.py` spawns (`tools/subagent_retrieve.py`)
 and to the `peak-retriever` agent this plugin ships.
@@ -82,7 +82,7 @@ and to the `peak-retriever` agent this plugin ships.
 - Children use the toolkit and terminal only.
 - Children RECORD failures (e.g. "arxiv returned empty") — never substitute a source.
 - Parent merges children's JSON into one evidence file and runs `verify_records` (Audit gate).
-- Never dispatch >10 concurrent; never let a child ask the user questions.
+- Never dispatch >3; never let a child ask the user questions.
 
 ## Quality gates (non-negotiable)
 

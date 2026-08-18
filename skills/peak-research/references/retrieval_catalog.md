@@ -100,7 +100,7 @@ github_search_repos, verify_records, resolve_paper, resolve_url`. All network ca
 transient 429/500/connection errors 3× with exponential backoff. Failures raise
 `RetrievalError` (never silent). `resolve_paper(axid)` tries OpenAlex-by-DOI then arXiv API.
 
-## 8. Subagent retrieval contract (up to 10 concurrent; leaf only)
+## 8. Subagent retrieval contract (max 3 concurrent; leaf only)
 Applies to the scripted workers (`tools/subagent_retrieve.py`) and to the `peak-retriever`
 agent this plugin ships. Full contract in `CONFIG.md`.
 - Each child gets: explicit goal, the toolkit path, a fixed list of source types to use,
@@ -108,4 +108,4 @@ agent this plugin ships. Full contract in `CONFIG.md`.
 - Children use the toolkit and terminal only.
 - They must RECORD failures (e.g., "arxiv returned empty") rather than substitute.
 - Parent merges children's JSON into one evidence table and runs `verify_records` (G3).
-- Never dispatch >10 children; never let a child ask the user questions.
+- Never dispatch >3 children; never let a child ask the user questions.

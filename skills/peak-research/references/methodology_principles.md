@@ -40,7 +40,7 @@
 - P7 (citation audit) + P8 (no snippet) → `verify_records` rejects any record without a resolved
   title+abstract; the toolkit never returns snippets as evidence.
 - P9 (programmatic gates) → `run_demo.py` asserts `res["pass"]` before "publishing".
-- P10 (parallelize) → the subagent contract in SKILL.md supports up to 10 concurrent leaf workers.
+- P10 (parallelize) → the subagent contract in SKILL.md caps at 3 concurrent leaf workers.
 
 ## Honesty notes (do not strip)
 - These principles are guidance, not measured benchmarks. The subagent could NOT pull production

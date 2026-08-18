@@ -1,6 +1,6 @@
 ---
 name: peak-retriever
-description: Leaf retrieval worker for one research sub-track. Use when a research task needs several independent literature searches run in parallel — one agent per subquestion or per retrieval pass (discovery / targeted / contradiction / gap). Returns primary findings as JSON and records its failures instead of substituting sources. Dispatch up to 10 concurrently.
+description: Leaf retrieval worker for one research sub-track. Use when a research task needs several independent literature searches run in parallel — one agent per subquestion or per retrieval pass (discovery / targeted / contradiction / gap). Returns primary findings as JSON and records its failures instead of substituting sources. Dispatch at most 3 concurrently.
 tools: Bash, Read, Glob, Grep
 ---
 

@@ -44,7 +44,7 @@ CONFIG = {
     "mailto": os.environ.get("OPENALEX_MAILTO", "research@example.com"),
     "catalog": P.catalog_path(),          # None when the user has no curated catalog
     "year_from": "2022-01-01",
-    "max_subagents": int(os.environ.get("PEAK_MAX_SUBAGENTS", "10")),
+    "max_subagents": 3,
     "output_dir": P.output_dir(),
     "min_cites_for_high": 50,
     "min_cites_for_medium": 10,

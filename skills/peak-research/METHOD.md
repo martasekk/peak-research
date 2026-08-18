@@ -26,8 +26,6 @@ Deliverable: `PLAN.md` (objective + subquestions + query list). Gate: objective 
 ## PHASE 2 — RETRIEVE  (steps 6-9)
 Goal: a verified source archive. Use `tools/retrieval.py` for every fetch.
 
-> **MANDATORY SUBAGENT INVOCATION**: When executed in an agent environment (Antigravity/Gemini/Claude), the orchestrator **MUST** dispatch leaf subagents (`invoke_subagent` using the `peak-retriever` or `research` role, up to 10 concurrent) to execute parallel discovery, targeted, contradiction, and gap passes concurrently rather than running them in a single serial pass.
-
 - **6. Source Map** — primary > derivative; official > aggregator. Record URL/date/author/type. Consult the curated catalog if `PEAK_CATALOG` points at one, plus `references/retrieval_catalog.md`.
 - **7. Strategy & Queries** — four-pass retrieval: **(a) discovery** (broad), **(b) targeted** (precise), **(c) contradiction** (seek dissent), **(d) gap** (fill uncovered sub-claims).
 - **8. Retrieve & Preserve** — execute; capture raw + parameters + timestamp. On failure: retry once, then fallback chain (CONFIG), then flag. *No snippet-as-evidence — fetch and read in context.*
